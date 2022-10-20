@@ -68,7 +68,7 @@ export const mintNFT = async (
   const user = new PublicKey(
     isCollection
       ? BASE_CONFIG.collectionMintDestination
-      : BASE_CONFIG.collectionMintDestination
+      : BASE_CONFIG.mintDestination
   );
 
   const mintKeypair = Keypair.generate();
@@ -179,7 +179,7 @@ export const mintNFT = async (
     },
     {
       updateMetadataAccountArgsV2: {
-        primarySaleHappened: true,
+        primarySaleHappened: false,
         data: metadataData,
         isMutable: BASE_CONFIG.isMutable,
         updateAuthority: collectionUpdateKeypair.publicKey,

@@ -12,14 +12,14 @@ import { makeUploadSecretKey } from '../utils/keypair';
     const bundlr = new Bundlr(
       process.env.NODE_ENV === 'development'
         ? 'https://devnet.bundlr.network'
-        : 'https://node1.bundlr.network/',
+        : 'https://node1.bundlr.network',
       'solana',
       uploadKeypair.secretKey,
       {
         providerUrl:
           process.env.NODE_ENV === 'development'
             ? 'https://metaplex.devnet.rpcpool.com'
-            : 'https://api.metaplex.solana.com',
+            : process.env.RPC_URL
       }
     );
 
