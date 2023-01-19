@@ -1,2 +1,2 @@
-# nft-utilities
-Houses scripts for performing miscellaneous NFT administrative tasks
+# 👋 Holaplex NFT Utilities
+Scripts for performing miscellaneous NFT administrative tasks
